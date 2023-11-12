@@ -1,0 +1,8 @@
+torch>=1.8.2
+tensorboard
+scikit-learn
+numpy
+matplotlib
+pandas
+tqdm
+joblib

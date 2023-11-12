@@ -1,0 +1,67 @@
+{
+    "experiment_name": "Synthetic",
+    
+    "embedding_size": 3, 
+    "hidden_sizes_scl": [16], 
+    "activation_scl": "ReLU", 
+    "is_hyper_sphere": true, 
+    "num_epochs_scl": 20, 
+    "lr_scl": 1e-4, 
+    
+    "model_clf_str": "MLP",
+    "hidden_sizes_clf": [6], 
+    "activation_clf": "ReLU", 
+    "num_epochs_clf": 20, 
+    "lr_clf": 1e-3, 
+    "use_nn_clf": false, 
+    "knn_clf": 2, 
+    
+    "model_temporal_str": "LSTM", 
+    "hidden_size_temporal": 3, 
+    "num_temporal_layers": 1, 
+    "predict_raw_temporal": false,
+    "num_epochs_temporal": 2,
+    "lr_temporal": 1e-3,
+    "criterion_temporal": "MSE",
+    
+    "do_nn_pairing": true, 
+    "nn_pairing_k": 1,
+    "approximate_nn": false,
+    "nn_metric": "minkowski", 
+
+    "num_epochs_scl_pretrain": 5, 
+    "num_epochs_clf_pretrain": 5,
+
+    "temperature_scl": 0.1,
+    "alpha_temporal": 10, 
+    "temporal_l2_reg_coeff": 0.1,
+
+    "seed": 822569775, 
+    "shuffle_data": true,
+    "train_batch_size": 32, 
+    "valid_batch_size": 32, 
+    "valid_size": 0.25, 
+    "test_batch_size": 32,
+    "test_size": 0.2, 
+    "is_binary_classification": false,
+    "use_external_class": true,
+    "return_embedding": true, 
+    
+    "is_data_splitted": false,
+    "data_pickle_path": "../data/data_synthetic.pickle", 
+    "nn_train_loader_is_saved": true,
+    "nn_train_loader_path": "../results/Synthetic/Synthetic_train_1NN_loader.pkl", 
+    "do_save_nn_train_loader": true,
+    
+    "use_gpu": true,
+
+    "is_ssl": false,
+    
+    "tensorboard_string": "TSCL_Synthetic_Full",
+    "generate_tensorboard_string_from_hyperparameters": false,
+    "include_datetime": true,
+
+    "resulting_dictionary_path": "../results/Synthetic/",
+    
+    "verbose": false 
+}
